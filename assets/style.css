@@ -1,0 +1,39 @@
+#user-form .card-body {
+ display: -ms-inline-grid;
+}
+
+h2 {
+    margin-left: 5px;
+}
+
+/* .btn {
+ display:inline-block;
+ padding: 00.7em 1.7em;     
+ margin: 0 0.3em 0.3em 0;
+ border-radius: 0.2em;   
+ box-sizing: border-box;
+ text-decoration: none;
+ font-family: sans-serif;
+ font-weight: 400;
+ color: aliceblue;   
+ background-color: #3369ff;   
+ box-shadow: inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);;
+ text-align: center;
+ position: relative;
+
+} */
+
+.btn-main {
+    background-color: blue;
+}
+
+.btn {
+    background-color: gray;
+
+}
+
+#top-info {
+    border: 2px black solid;
+
+}
+
