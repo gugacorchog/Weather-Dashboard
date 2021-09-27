@@ -1,11 +1,22 @@
+/* 
+
+
 #user-form .card-body {
  display: -ms-inline-grid;
 }
 
-h2 {
-    margin-left: 5px;
+/* h1{
+    background-color: blue !important;
+} */
+/* 
+.text {
+    margin-left: 5px !important;
+    color: blue !important;
+    font-size: 100px;
 }
-
+#text1 {
+    color: blue !important; */
+}
 /* .btn {
  display:inline-block;
  padding: 00.7em 1.7em;     
@@ -23,7 +34,7 @@ h2 {
 
 } */
 
-.btn-main {
+/* .btn-main {
     background-color: blue;
 }
 
@@ -37,3 +48,6 @@ h2 {
 
 }
 
+.grid {
+    display: block;
+} */ */
