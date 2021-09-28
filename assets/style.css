@@ -1,23 +1,34 @@
-/* 
 
 
-#user-form .card-body {
- display: -ms-inline-grid;
+
+
+
+.generalBtn { 
+    display:inline-block;
+
 }
 
-/* h1{
-    background-color: blue !important;
-} */
-/* 
+
+
+h1,
+h5 {
+    display: inline;
+} 
+
+h2 {
+    margin-left: 50%;
+}
+
 .text {
-    margin-left: 5px !important;
-    color: blue !important;
+    margin-left: 5px;
+    color: blue;
     font-size: 100px;
-}
+} 
 #text1 {
-    color: blue !important; */
+    color: blue;
 }
-/* .btn {
+
+.btn-main {
  display:inline-block;
  padding: 00.7em 1.7em;     
  margin: 0 0.3em 0.3em 0;
@@ -32,22 +43,5 @@
  text-align: center;
  position: relative;
 
-} */
+} 
 
-/* .btn-main {
-    background-color: blue;
-}
-
-.btn {
-    background-color: gray;
-
-}
-
-#top-info {
-    border: 2px black solid;
-
-}
-
-.grid {
-    display: block;
-} */ */

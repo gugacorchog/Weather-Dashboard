@@ -1,40 +1,59 @@
 var cityList =$("#city-list");
 var key = "8dcfe0fcdd0a421ab0189dc0e678b663";
-var City
+var cityName = document.getElementById("cityname")
 var searchBtn = document.querySelector('.btn-main');
-var bnt1 = document.getElementById('btn1');
-var btn2 = document.getElementById('btn2');
-var btn3 = document.getElementById('btn3');
-var btn4 = document.getElementById('btn4');
-var btn5 = document.getElementById('btn5');
-var btn6 = document.getElementById('btn6');
-var bnt7 = document.getElementById('btn7');
-var btn8 = document.getElementById('btn8');
-var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=key"
+// var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=" + key
 var topInfo = document.getElementById("top-info");
 var forcast = document.getElementById("dayForecast");
+var userForm = document.getElementById("user-form");
+var generalBtn = document.querySelector(".generalBtn");
 
-// "https://api.openweathermap.org/data/2.5/weather?q=" +cityName+ "&appid=" + key;
 
 
-function citySearch () {
-    searchBtn.valeu = requestUrl;
-    searchBtn.textContent = requestUrl;
+function citySearch (event) {
+    event.preventDefault()
+    var city = cityName.value
+    var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" +city+ "&appid=" + key;
+    getApi(requestUrl);
+    afterclick = document.createElement("button")
+    afterclick.textContent = city
+    generalBtn.appendChild(afterclick);
 }
 
-searchBtn.addEventListener("click", citySearch);
-console.log(citySearch);
+userForm.addEventListener("submit", citySearch);
+// console.log(citySearch);
 
 
 function getApi(requestUrl) {
+    topInfo.textContent = ""
     fetch(requestUrl)
         .then(function (response){
         return response.json();
         console.log(response);       
     }).then(function (data) {
-        console.log(data);
-        // city name
-        var cityName = document.createElement("h1")
+       renderTopInfo(data) 
+       renderForcast(data)
+    
+    })
+}   
+
+function historyBtn(event){
+    // console.log(event.target);
+    var city = event.target.textContent
+    // console.log(city);
+    var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" +city+ "&appid=" + key;
+    getApi(requestUrl);
+}
+
+
+generalBtn.addEventListener("click", historyBtn);
+console.log(historyBtn);
+
+
+
+function renderTopInfo (data) {
+
+    var cityName = document.createElement("h1")
         cityName.textContent = data.name
         topInfo.appendChild(cityName)
         // temp
@@ -49,10 +68,21 @@ function getApi(requestUrl) {
         var humidity = document.createElement("h5")
         humidity.textContent = data.main.humidity
         topInfo.appendChild(humidity)
-        // UV idex ????
-        var uvIndex = document.createElement("h5")
-        uvIndex.textContent = data.main.humidity
-        topInfo.appendChild(uvIndex)
-    })
-}   
+
+}
+
+function renderForcast(data){
+    console.log(data);
+    var day1 = document.getElementById("day1");
+    var firstDay = document.createElement("h2")
+    firstDay.textContent = ".."
+    day1.appendChild(firstDay)
+
+    var day2 = document.getElementById("day2");
+    var secondDay = document.createElement("h2")
+    secondDay.textContent = ".."
+    day2.appendChild(secondDay)
+}
+
+// for (var i = 0; i < 5; i++)
 
