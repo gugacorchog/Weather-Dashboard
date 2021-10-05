@@ -12,51 +12,44 @@
 </head>
 <body>
 
- <div class="container">   
- <div class="bg-primary fs-3 text-center text-white " style="height: 65px;">
-    <div class="container">
-        <h1 class="display-4">Weather Dashboard</h1>
+ <div class="container-fluid">   
+   <div class="bg-primary fs-3 text-center text-white " style="height: 65px;">
+      <h1 class="display-4">Weather Dashboard</h1>
+   </div>    
+
+
+   <div class="row">    
+   <div id="weather" class="col-3">
+      <div id="weather-child"></div>
+      <h2 id="text1" class="text">Search for a city:</h2>
+      <form id="user-form" class="card-body"> 
+         <input name="cityname" id="cityname" placeholder="Which City?" type="text" class="form-input" />
+         <button type="submit" class="btn-main">Search</button>
+      </form>
+
+      <div class="card" style="width: 18rem;"></div>
+
+      <div class="container">
+        <div class="generalBtn row"></div>  
+      </div>
     </div>
-    </div>    
-
-<div class="container">
-<div class="row">    
-<div id="weather">
-    <div id="weather-child"></div>
-    <h2 id="text1" class="text">Search for a city:</h2>
-    <form id="user-form" class="card-body"> 
-        <input name="cityname" id="cityname" placeholder="Which City?" type="text" class="form-input" />
-        <button type="submit" class="btn-main">Search</button>
-    </form>
-
-        <div class="card" style="width: 15rem;"></div>
-        <div class="generalBtn">
-     </div>  
-   </div>
-</div>
 
 <!--Top-inf = weather today-->
-<div class="container">
-    <div class="row">
-        <div id="top-info">
-            <!-- <h3>City:</h3>
-              <p></p>
-              <p></p>
-              <p></p>
-              <p></p> -->
-            </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row" id="dayForecast">
-        <div class="w3-button w3-round-xlarge" id="day1"></div>
-        <div id="day2"></div>
-        <div id="day3"></div>
-        <div id="day4"></div>
-        <div id="day5"></div>
-       </div>
-    </div>
+   <div class="col-8">
+      <div class="row border border-dark rounded p-2 mt-2">
+         <div id="top-info">
+               <!-- <h3>City:</h3>
+               <p></p>
+               <p></p>
+               <p></p>
+               <p></p> -->
+         </div>
+      </div>
+     
+      <div class="container">
+         <div class="row" id="dayForecast"></div> 
+      </div>
+   </div>
 </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -64,3 +57,20 @@
     <script src="./assets/index.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
