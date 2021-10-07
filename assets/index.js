@@ -114,9 +114,7 @@ function renderTopInfo (data) {
         // Humidity
         var humidity = document.createElement("h6")
         humidity.textContent = "Humidity: " + data.main.humidity + " %"
-        topInfo.appendChild(humidity)
-
-        
+        topInfo.appendChild(humidity)                       
 
 
 
@@ -134,7 +132,7 @@ function getForecastData(city) {
 }
 
 searchBtn.addEventListener("click", getForecastData)
-get
+
 
 // for (var i = 0; i < 5; i++)
 
