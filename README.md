@@ -18,7 +18,8 @@ THEN I am again presented with current and future conditions for that city
 
 URL: https://gugacorchog.github.io/Weather-Dashboard/
 
-![alt text](images/WeatherDashBoard.jpg)
+
+![WeatherDashBoard](https://user-images.githubusercontent.com/87793995/136538505-c3910ce6-7aa8-46dc-84d3-f21c28e652eb.jpg)
 
 
 
